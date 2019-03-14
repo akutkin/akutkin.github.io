@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+        <html lang="en">
+        <head>
+            <?php include("base.inc"); ?>
+            <meta name="DCTERMS.Creator" lang="en" content="personalName=Collier,Jordan" />
+            <meta name="DC.Title" lang="en" content="Continuum Validation Report" />
+            <meta name="DC.Description" lang="en" content="Continuum validation report summarising science readiness of data via several metrics" />
+            <?php standard_head(); ?>
+            <style>
+                .reportTable {
+                    border-collapse: collapse;
+                    width: 100%;
+                }
+
+                .reportTable th, .reportTable td {
+                    padding: 15px;
+                    text-align: middle;
+                    border-bottom: 1px solid #ddd;
+                    vertical-align: top;
+                }
+
+                .reportTable tr {
+                    text-align:center;
+                    vertical-align:middle;
+                }
+
+                .reportTable tr:hover{background-color:#f5f5f5}
+
+                #good {
+                    background-color:#00FA9A;
+                }
+
+                #uncertain {
+                    background-color:#FFA500;
+                }
+
+                #bad {
+                    background-color:#FF6347;
+                }
+
+            </style>
+<title>APERTIF Continuum Validation Report</title>
+
+        </head>
+        <?php title_bar("atnf"); ?>
+        <body>
+            <h1 align="middle">APERTIF Continuum Data Validation Report</h1>
+        <h2 align="middle">Observations</h2>
+        <table class="reportTable">
+            <tr>
+                <th>SBID</th>
+                <th>Project</th>
+                <th>Date</th>
+                <th>Duration<br>(hours)</th>
+                <th>Field Centre</th>
+                <th>Central Frequency<br>(MHz)</th>
+            </tr>
+            <tr>
+                    <td></td>
+                    <td></td>
+                    <td>2007-01-01T03:24:39.9</td>
+                    <td></td>
+                    <td>10:52:17.6704 +58:01:09.5794</td>
+                    <td>1381.13</td>
+                    </tr>
+        </table>
+        <h2 align="middle">Image</h2>
+        <h4 align="middle"><i>File: 'WSRT_mosaic.fits'</i></h3>
+        <table class="reportTable">
+            <tr>
+                <th>APERCAL<br>version</th>
+                <th>QA_reporter<br>version</th>
+                <th>Synthesised Beam<br>(arcsec)</th>
+                <th>Median r.m.s.<br>(uJy)</th>
+                <th>Image peak<br>(Jy)</th>
+                <th>Dynamic Range</th>
+                <th>Sky Area<br>(deg<sup>2</sup>)</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>13.4 x 10.5</td>
+                <td>33</td>
+                <td>0.40</td>
+                <td>2E+03</td>
+                <td>11.83</td>
+            </tr>
+        </table>
+        <h2 align="middle">Catalogue</h2>
+        <h4 align="middle"><i>File: 'WSRT_mosaic_aegean_comp.fits'</i></h3>
+        <table class="reportTable">
+            <tr>
+                <th>Source Finder</th>
+                <th>Flux Type</th>
+                <th>Number of<br>sources (&ge;5.0&sigma;)</th>
+                <th>Multi-component<br>islands</th>
+                <th>Sum of image flux vs.<br>sum of catalogue flux</th>
+                <th>Median in-band spectral index</th>
+                <th>Median int/peak flux</th>
+                <th>Source Counts<br>&#967;<sub>red</sub><sup>2</sup></th>
+            </tr>
+            <tr>
+                <td>aegean</td>
+                <td>integrated</td>
+                <td>2806</td>
+                <td>149</td>
+                <td>13.5 Jy vs. 7.3 Jy</td>
+                <td></td><td>1.29<br><a href="figures/APERTIF_int_peak_ratio.html"><IMG SRC="figures/APERTIF_int_peak_ratio_thumb.png"></a></td><td>40.86<br><a href="figures/APERTIF_source_counts.html"><IMG SRC="figures/APERTIF_source_counts_thumb.png"></a></td>
+                        </tr>
+                    </table>
+        <h2 align="middle">Cross-matches</h2>
+        <table class="reportTable">
+            <tr>
+                <th>Survey</th>
+                <th>Frequency<br>(MHz)</th>
+                <th>Cross-matches</th>
+                <th>Median offset<br>(arcsec)</th>
+                <th>Median flux ratio</th>
+                <th>Median spectral index</th>
+            </tr><tr>
+                        <td>NVSS</td>
+                        <td>1400.0</td>
+                        <td>186</td>
+                        <td>0.25 &plusmn 11.87 (RA)<br>10.02 &plusmn 10.44 (Dec)<br><a href="figures/APERTIF_NVSS_astrometry.html"><IMG SRC="figures/APERTIF_NVSS_astrometry_thumb.png"></a><a href="figures/APERTIF_NVSS_astrometry_sky.html"><IMG SRC="figures/APERTIF_NVSS_astrometry_sky_thumb.png"></a></td>
+                        <td>0.76 &plusmn 0.39 (extrapolated)<br><a href="figures/APERTIF_NVSS_ratio.html"><IMG SRC="figures/APERTIF_NVSS_ratio_thumb.png"></a><a href="figures/APERTIF_NVSS_ratio_sky.html"><IMG SRC="figures/APERTIF_NVSS_ratio_sky_thumb.png"></a><td></td>
+                    </tr>
+                </td>
+            </tr>
+        </table>
+        <h2 align="middle">APERTIF continuum validation metrics</h2>
+        <table class="reportTable">
+            <tr>
+                <th>Flux Ratio<br>(APERTIF / NVSS-extrapolated)</th>
+                <th>Flux Ratio Uncertainty<br>(APERTIF / NVSS-extrapolated)</th>
+                <th>Positional Offset (arcsec)<br>(APERTIF &mdash; NVSS)</th>
+                <th>Positional Offset Uncertainty (arcsec)<br>(APERTIF &mdash; NVSS)</th>
+                <th>Resolved Fraction from int/peak Flux<br>(APERTIF)</th>
+                <th>Source Counts &#967;<sub>red</sub><sup>2</sup><br>(APERTIF)</th>
+                <th>r.m.s. (uJy)<br>(APERTIF)</th>
+            </tr>
+        <tr>
+            <td id='bad'>0.76</td>
+            <td id='bad'>0.39</td>
+            <td id='bad'>10.02</td>
+            <td id='bad'>15.81</td>
+            <td id='uncertain'>0.27</td>
+            <td id='uncertain'>40.86</td>
+            <td id='good'>33</td>
+        </tr>
+            </table>
+                <p><i>Generated at 2019-03-14 19:53:43</i></p>
+            <?php footer(); ?>
+            </body>
+        </html>
