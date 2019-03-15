@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+        <html lang="en">
+        <head>
+            <?php include("base.inc"); ?>
+            <meta name="DCTERMS.Creator" lang="en" content="personalName=Collier,Jordan" />
+            <meta name="DC.Title" lang="en" content="Continuum Validation Report" />
+            <meta name="DC.Description" lang="en" content="Continuum validation report summarising science readiness of data via several metrics" />
+            <?php standard_head(); ?>
+            <style>
+                .reportTable {
+                    border-collapse: collapse;
+                    width: 100%;
+                }
+
+                .reportTable th, .reportTable td {
+                    padding: 15px;
+                    text-align: middle;
+                    border-bottom: 1px solid #ddd;
+                    vertical-align: top;
+                }
+
+                .reportTable tr {
+                    text-align:center;
+                    vertical-align:middle;
+                }
+
+                .reportTable tr:hover{background-color:#f5f5f5}
+
+                #good {
+                    background-color:#00FA9A;
+                }
+
+                #uncertain {
+                    background-color:#FFA500;
+                }
+
+                #bad {
+                    background-color:#FF6347;
+                }
+
+            </style>
+<title>APERTIF Continuum Validation Report</title>
+
+        </head>
+        <?php title_bar("atnf"); ?>
+        <body>
+            <h1 align="middle">APERTIF Continuum Data Validation Report</h1>
+        <h2 align="middle">Observations</h2>
+        <table class="reportTable">
+            <tr>
+                <th>SBID</th>
+                <th>Project</th>
+                <th>Date</th>
+                <th>Duration<br>(hours)</th>
+                <th>Field Centre</th>
+                <th>Central Frequency<br>(MHz)</th>
+            </tr>
+            <tr>
+                    <td></td>
+                    <td></td>
+                    <td>2019-01-10T02:03:58.9</td>
+                    <td></td>
+                    <td>10:54:00.2471 +57:20:35.988</td>
+                    <td>1385.23</td>
+                    </tr>
+        </table>
+        <h2 align="middle">Image</h2>
+        <h4 align="middle"><i>File: 'LH-09-Jan-2019.fits'</i></h3>
+        <table class="reportTable">
+            <tr>
+                <th>APERCAL<br>version</th>
+                <th>APERCAL<br>path</th>
+                <th>Synthesised Beam<br>(arcsec)</th>
+                <th>Median r.m.s.<br>(uJy)</th>
+                <th>Image peak<br>(Jy)</th>
+                <th>Dynamic Range</th>
+                <th>Sky Area<br>(deg<sup>2</sup>)</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>18.9 x 11.2</td>
+                <td>128</td>
+                <td>0.70</td>
+                <td>3E+03</td>
+                <td>11.12</td>
+            </tr>
+        </table>
+        <h2 align="middle">Catalogue</h2>
+        <h4 align="middle"><i>File: 'LH-09-Jan-2019_aegean_comp.fits'</i></h3>
+        <table class="reportTable">
+            <tr>
+                <th>Source Finder</th>
+                <th>Flux Type</th>
+                <th>Number of<br>sources (&ge;5.0&sigma;)</th>
+                <th>Multi-component<br>islands</th>
+                <th>Sum of image flux vs.<br>sum of catalogue flux</th>
+                <th>Median in-band spectral index</th>
+                <th>Median int/peak flux</th>
+                <th>Source Counts<br>&#967;<sub>red</sub><sup>2</sup></th>
+            </tr>
+            <tr>
+                <td>aegean</td>
+                <td>integrated</td>
+                <td>1322</td>
+                <td>71</td>
+                <td>9.2 Jy vs. 9.7 Jy</td>
+                <td></td><td>1.14<br><a href="figures/APERTIF_int_peak_ratio.html"><IMG SRC="figures/APERTIF_int_peak_ratio_thumb.png"></a></td><td>2.48<br><a href="figures/APERTIF_source_counts.html"><IMG SRC="figures/APERTIF_source_counts_thumb.png"></a></td>
+                        </tr>
+                    </table>
+        <h2 align="middle">Cross-matches</h2>
+        <table class="reportTable">
+            <tr>
+                <th>Survey</th>
+                <th>Frequency<br>(MHz)</th>
+                <th>Cross-matches</th>
+                <th>Median offset<br>(arcsec)</th>
+                <th>Median flux ratio</th>
+                <th>Median spectral index</th>
+            </tr><tr>
+                        <td>FIRST</td>
+                        <td>1400.0</td>
+                        <td>685</td>
+                        <td>-0.61 &plusmn 1.20 (RA)<br>-0.44 &plusmn 0.94 (Dec)<br><a href="figures/APERTIF_FIRST_astrometry.html"><IMG SRC="figures/APERTIF_FIRST_astrometry_thumb.png"></a><a href="figures/APERTIF_FIRST_astrometry_sky.html"><IMG SRC="figures/APERTIF_FIRST_astrometry_sky_thumb.png"></a></td>
+                        <td>1.03 &plusmn 0.42 (extrapolated)<br><a href="figures/APERTIF_FIRST_ratio.html"><IMG SRC="figures/APERTIF_FIRST_ratio_thumb.png"></a><a href="figures/APERTIF_FIRST_ratio_sky.html"><IMG SRC="figures/APERTIF_FIRST_ratio_sky_thumb.png"></a><td></td>
+                    </tr><tr>
+                        <td>NVSS</td>
+                        <td>1400.0</td>
+                        <td>518</td>
+                        <td>-0.56 &plusmn 4.48 (RA)<br>-1.03 &plusmn 4.12 (Dec)<br><a href="figures/APERTIF_NVSS_astrometry.html"><IMG SRC="figures/APERTIF_NVSS_astrometry_thumb.png"></a><a href="figures/APERTIF_NVSS_astrometry_sky.html"><IMG SRC="figures/APERTIF_NVSS_astrometry_sky_thumb.png"></a></td>
+                        <td>0.74 &plusmn 0.43 (extrapolated)<br><a href="figures/APERTIF_NVSS_ratio.html"><IMG SRC="figures/APERTIF_NVSS_ratio_thumb.png"></a><a href="figures/APERTIF_NVSS_ratio_sky.html"><IMG SRC="figures/APERTIF_NVSS_ratio_sky_thumb.png"></a><td></td>
+                    </tr><tr>
+                        <td>TGSS</td>
+                        <td>150.0</td>
+                        <td>236</td>
+                        <td>-0.72 &plusmn 2.03 (RA)<br>0.07 &plusmn 2.11 (Dec)<br><a href="figures/APERTIF_TGSS_astrometry.html"><IMG SRC="figures/APERTIF_TGSS_astrometry_thumb.png"></a><a href="figures/APERTIF_TGSS_astrometry_sky.html"><IMG SRC="figures/APERTIF_TGSS_astrometry_sky_thumb.png"></a></td>
+                        <td>0.72 &plusmn 0.52 (extrapolated)<br><a href="figures/APERTIF_TGSS_ratio.html"><IMG SRC="figures/APERTIF_TGSS_ratio_thumb.png"></a><a href="figures/APERTIF_TGSS_ratio_sky.html"><IMG SRC="figures/APERTIF_TGSS_ratio_sky_thumb.png"></a></td>
+                        <td>-0.95 &plusmn 0.33<br><a href="figures/APERTIF_TGSS_spectal_index.html"><IMG SRC="figures/APERTIF_TGSS_spectal_index_thumb.png"></a></td>
+                    </tr>
+                </td>
+            </tr>
+        </table>
+        <h2 align="middle">APERTIF continuum validation metrics</h2>
+        <table class="reportTable">
+            <tr>
+                <th>Flux Ratio<br>(APERTIF / FIRST-extrapolated)</th>
+                <th>Flux Ratio Uncertainty<br>(APERTIF / FIRST-extrapolated)</th>
+                <th>Positional Offset (arcsec)<br>(APERTIF &mdash; FIRST)</th>
+                <th>Positional Offset Uncertainty (arcsec)<br>(APERTIF &mdash; FIRST)</th>
+                <th>Resolved Fraction from int/peak Flux<br>(APERTIF)</th>
+                <th>Source Counts &#967;<sub>red</sub><sup>2</sup><br>(APERTIF)</th>
+                <th>r.m.s. (uJy)<br>(APERTIF)</th>
+            </tr>
+        <tr>
+            <td id='good'>1.03</td>
+            <td id='bad'>0.42</td>
+            <td id='good'>0.75</td>
+            <td id='good'>1.52</td>
+            <td id='uncertain'>0.23</td>
+            <td id='good'>2.48</td>
+            <td id='uncertain'>128</td>
+        </tr>
+            </table>
+                <p><i>Generated at 2019-03-15 17:39:48</i></p>
+            <?php footer(); ?>
+            </body>
+        </html>
